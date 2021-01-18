@@ -1,0 +1,11 @@
+prefix=/usr/local/pspdev/psp
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libosip2
+Description: GNU osip2 core library for sip protocol
+Version: 3.0.3
+Libs: -losipparser2 -losip2
+Cflags: -DOSIP_MT
+	 

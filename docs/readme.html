@@ -1,0 +1,232 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Furikup - PSP SIP Phone Documentation</title>
+<link href="docs.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang=EN-US onload='generate_contents()'>
+<div class='logo_left'><img src='sipphone.png'></div>
+<div class='logo_right'><img src='sipphone.png'></div>
+<h1 class='title nocontents'>Furikup - PSP SIP Phone v0.1</h1>
+
+<p align=center>by Noobz!
+
+<div class='clear'>&nbsp</div>
+<h1 class='nocontents'>Official Resources</h1>
+<table>
+<tr><td>Official Website:</td><td><a href="http://www.noobz.eu">http://www.noobz.eu</a></td></tr>
+<tr><td>Official Forum:</td><td><a href="http://forums.noobz.eu">http://forums.noobz.eu</a></td></tr>
+<tr><td>Official IRC:</td><td><a href="irc://irc.noobz.eu/noobz">#noobz on irc.noobz.eu</a></td></tr>
+</table>
+
+<div id='contents_table' style='display: none;'>
+<h1 class='nocontents'>Contents</h1>
+</div>
+<h1>Introduction</h1>
+
+<p>This program allows you to use your PSP as a phone, using Voice-over-IP (VoIP) technology.  We got a bit bored waiting for Sony to release their PSP phone offering, so we thought we'd do it for them.  Such is the freedom of homebrew.
+
+<p>You can use your PSP to make and receive calls to and from other PSPs, or to other VoIP users, or even to standard landline and mobile telephones, depending upon the VoIP service that you use.  Calls are generally free, or at least cheaper than standard landline rates - again, depending upon your VoIP provider.
+
+<p>This is an initial release, currently supporting audio-only calls, and with a very basic user interface.  But it works, and that's the main thing.
+
+<p>The VoIP engine is implemented as a standalone PRX, with a well-defined interface. As well as using our simple phone application, we encourage other developers to make use of this technology for other applications.  We're sure that someone can write a nicer user interface than ours, so please do.  There's also scope for plenty of other uses - such as a CFW plugin for calls within the XMB, or teamtalk-style add-ons for games etc. Go wild!
+
+<h1>Requirements to run this application</h1>
+
+<p>To get the most out of this release, you'll need the following:
+<ul>
+ <li>A working, reasonably fast network connection for your PSP.  We haven't tested with anything slower than ADSL broadband.
+ <li>Custom firmware.  We've tested on 3.71 M33-2.  It may work on other custom firmwares.  It will definitely not work on v1.50 firmware, and probably not via eLoader on non-custom firmwares.
+ <li>Some form of audio input device.  We've tested with the Go!Cam (or Chotto Shot), Talkman USB mic, and it should also work with SOCOM-style headsets. If you don't have audio input hardware, you can still source audio from a WAV file - see <a href='#inputfile'>later</a>.
+ <li>A Voice-over-IP (VOIP) account on a SIP server (SIP is the <strong>S</strong>ession <strong>I</strong>nitiation <strong>P</strong>rotocol, and is used to control digital telephony).  We tested with SIPGate (www.sipgate.co.uk, www.sipgate.de), but that's probably a UK/DE-only service.
+</ul>
+
+<h1>Major known limitations of this release</h1>
+
+<ul>
+<li>There's no video or presence support.  Those will come in future releases.
+
+<li>Only 'sip:' URIs are supported.  'tel:' URIs will crash the engine.
+
+<li>When building from source, the libs target will appear to fail.  But that's just the test applications, you can safely ignore the failure.
+
+<li>It's very much in development, so you should expect
+a few bugs, particularly for error cases and interoperability with various different SIP servers that we've been unable to test against.
+</ul>
+
+
+<h1>Terms of use</h1>
+
+<p class="warning">This software is made available for use as-is, without any
+guarantee of usability, safety, fitness for purpose etc.  We've
+taken all reasonable precautions to ensure that it cannot
+damage your PSP, but cannot be held responsible for any damage
+caused.
+
+<p class="warning">You are not permitted to sell this software.  If you paid money
+for this program (most often through eBay), you should demand a
+refund of your payment, and report the seller to the appropriate
+authorities.
+
+<p class="warning">Source code is provided, some of which is provided under specific licenses - see notes in the source code.  If you distribute any work based upon this software, you must preserve all credits, and honour those licenses - which generally means supplying full source code with your work.
+
+<h1>To install the SIP Phone</h1>
+
+<p>Copy the contents of the MS_ROOT folder to the topmost folder on 
+your PSP memory stick.  If you've done this correctly, you will end up with
+a set of files within the folder 
+<pre><code>  /PSP/GAME/Furikup
+</code></pre>
+<p>on your memory stick.
+
+<p>If you're using custom firmware, with the default kernel set to v1.5, you may wish to copy the folder to GAME370 or a similarly-named folder.  We assume that if you know about how to change your default kernel, then you'll understand what you need to do.
+
+<h1>Setting up a VoIP account</h1>
+
+<p>You'll need an account with a VoIP provider to be able to use the SIP phone.  VoIP providers vary in what they offer, at a minimum you need to find a provider that will allow you to register with their SIP server.  You ought to be able to find one in your country by googling for "VOIP provider SIP" plus your country name.
+
+<p>In the UK and Germany, we found <a href='http://www.sipgate.co.uk'>SIPGate</a>, which seems to be a very good provider. They offer free connectivity from the standard public switched telephone network (PSTN) to VoIP (so you can make calls to your PSP from a standard phone), and very cheap connectivity from VoIP to PSTN (so you can make calls from your PSP to standard phones).  They're also free to register with.
+
+<p>Once you've registered, you should receive details of the SIP server to connect to, and account details to authenticate with it.  For SIPGate, these can be seen on your 'Settings' page on the SIPGate web site.
+
+<p>We have a support thread at the <a href='http://forums.noobz.eu/sip-phone-support/compatible-voip-providers/0/'>Noobz support forum</a>, with information on recommended VoIP providers.  If you test the SIP phone against a provider that's not on the list, then please post details there on how you got on, to make life easier for others.
+
+<p class='warning'>Note that we were unable to get the SIP Phone working with voipbuster.com.
+
+<h1>Configuration Files</h1>
+
+<h2>sipcfg.ini</h2>
+<p>Now you need to set up your configuration file to use your VOIP account, and select some preferences.  You can find the configuration file in <code>/psp/game/Furikup/sipcfg.ini</code> on your memory stick.  You can edit it with your favourite text editor - e.g. Windows Notepad, gedit or Emacs, according to taste...  The meaning of the various parameters is as follows:
+<p>
+  <table border=1>
+     <tr><td><code>server</code></td><td>The name of the SIP server to register with.  This will also be used as your SIP proxy. There's no need to specify a port number.</td></tr>
+     <tr><td><code>username</code></td><td>Your username for the SIP server.</td></tr>
+     <tr><td><code>password</code></td><td>Your password for the SIP server.</td></tr>
+     <tr><td><code>stunserver</code></td><td>The STUN server to use if you're behind a firewall, but there's no harm in using a STUN server without a firewall.  The only STUN server we've successfully tested against is stun.voipbuster.com.</td></tr>
+     <tr><td><code>stunport</code></td><td>The IP port number to use for the STUN server.   3478 is the standard port.</td></tr>
+     <tr><td><code>input</code></td><td>The type of input to use for audio.  Options are:
+<ul><li><code>usbcam</code> : use the Go!Cam (Chotto Shot) camera microphone
+    <li><code>usbmic</code> : use the Talkman USB microphone
+    <li><code>headset</code> : use a SOCOM-style headset (There are plenty of tutorials on the internet showing how to make your own, e.g. <a href='http://www.psp-hacks.com/2005/11/21/make-your-own-socom-headset/'>here</a>).
+    <li><a name='inputfile' /><code>file</code> : read audio from a WAV file.  This file must be called audio.wav, with format 44.1kHz, 16-bit mono, and placed in the Furikup folder.
+</ul></td></tr>
+     <tr><td><code>logfile</code></td><td>The filename to log debug information to.</td></tr>
+     <tr><td><code>disablenat</code></td><td>Used to disable NAT traversal, should only need to be used on private networks.  Set to "yes" to enable.</td></tr>
+  </table>
+  
+<h2>contacts.txt</h2>
+<p>You'll also need to set up an address book of people you can call.  This is defined by <code>/psp/game/Furikup/contacts.txt</code>.  Each line contains one contact, in the format:
+<p><code>nickname,SIP URI,firstname,lastname</code>
+<p>Most of these should be self explanatory, and examples are given in the sample contacts.txt file.
+
+<h1>Using the SIP Phone</h1>
+
+<p>To start the SIP Phone, just run it in the usual way from the XMB's Game>Memory Stick menu.
+<p>Make sure that your wifi switch is enabled, and after a few moments the phone should have completed logging into your SIP server.
+<p>You'll be presented with a list of your contacts.  Select one with the up and down buttons on the D-pad, then press <strong>X</strong> to dial.  Further instructions will appear depending on the current context, for example which button to press to accept or reject incoming calls.
+<p>To quit, use either the usual <strong>HOME</strong> button, or you can press <strong>START</strong> as a short-cut.
+
+<h1>Troubleshooting</h1>
+
+<p>If you have problems getting the SIP phone to work, here are a few things to try:
+
+<ul>
+<li>Check that your PSP's networking is set up correctly.  We've seen some problems with DNS lookups with a static IP configuration, so DHCP is preferred.
+<li>Check that the settings in your sipcfg.ini file are correct. If the 'Server:' status display shows as 'Connected', then the 'server', 'username', 'password', 'stunserver' and 'stunport' settings must be correct.  If not, then check these values.
+<li>Try calling the 'SIP Test' number in the sample configuration.  (You may need to change the server name from 'sipgate.co.uk' in contacts.txt, if you're using a different server).  If this call works, then probably any problems with other calls are due to bad entries in contacts.txt.
+<li>You can enable extra debugging information, by pressing <strong>SELECT</strong> in the UI.  If you need help diagnosing problems, please make a note of the messages that appear when the debugging messages are enabled before contacting the forums or IRC for help.
+
+</ul>
+
+
+<h1>Future plans</h1>
+
+<p>We intend to add video call and presence support to the engine in a future release.  Beyond that, we have no major plans for additional applications using the engine - so if you have any ideas, go for it - but please get in touch with us first
+so we can help you out.
+
+<h1>Acknowledgements</h1>
+
+<p>This application contains code from the following projects:
+<ul>
+<li>oRTP library by Simon Morlat and Lovadina Nicola
+<li>oSIP and eXoSIP libraries by Aymeric Moizard
+</ul>
+<p>Their contribution is gratefully recognised, please see further information in the source code documentation.
+<p>This app wouldn't have been possible without hard work of all the folks over time who have made PSP homebrew possible - from those developing firmware exploits and custom firmwares, and those developing the tools (especially the PSPSDK from <a href='www.ps2dev.org'>ps2dev.org</a>), to those working hard to help out newbies in the various forums.  We salute you all.
+
+<p>If you have found this program useful and want to encourage
+further development, please consider donating a small amount
+via paypal to donations@noobz.eu.
+
+<h1>Change history</h1>
+
+<ul>
+  <li>v0.1: Initial release
+     <ul><li>This is the initial proof-of-concept release, supporting audio-only connections, and with a basic text UI.
+     </ul>
+  <li>v0.1.12: Bug fixes for initial release
+     <ul><li>Extra features added to allow debugging using a logfile, network selection and improved quit support.
+</ul>
+
+<script>
+function generate_contents()
+{
+ var headings = document.getElementsByTagName('H1')
+ var item
+ var tds
+ var count
+ var table
+ var anch
+ var lindest
+ var rawtext
+ var count = 0;
+ var noderow;
+ var nodetd;
+ var nodetable = document.createElement('OL');
+ var nodelink;
+
+ for (j=0; j<headings.length; j++)
+ {
+  if (headings.item(j).className.indexOf("nocontents") == -1)
+  {
+//		alert(item(j).innerHTML);
+		
+		item = headings.item(j);
+		
+		anch = document.createElement('A');
+		anch.href = '#' + item.innerHTML;
+		
+		nodetd = document.createElement('LI');
+		nodetd.align = "left";
+		nodetd.width = "100px";
+		count++;
+		anch.innerHTML = item.innerHTML;
+		nodetd.appendChild(anch);
+		nodetable.appendChild(nodetd);
+	
+		anch = document.createElement('A');
+		anch.name = item.innerHTML;
+		item.appendChild(anch);
+		
+	}
+ }
+
+ nodetable.width="100%";
+
+ divs = document.getElementsByTagName('div');
+ for (i=0; i < divs.length; i++)
+ {
+  item=divs.item(i);
+  if (item.id=="contents_table")
+  {
+   item.appendChild(nodetable);
+	 item.style.display = 'inline';
+  }
+ }
+}
+</script>
+
+</body>

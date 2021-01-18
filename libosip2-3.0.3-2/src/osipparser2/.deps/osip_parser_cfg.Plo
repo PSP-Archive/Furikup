@@ -1,0 +1,186 @@
+osip_parser_cfg.lo osip_parser_cfg.o: osip_parser_cfg.c \
+  ../../include/osipparser2/osip_port.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/stdio.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/_ansi.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/newlib.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/config.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/ieeefp.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/include/stddef.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/include/stdarg.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/reent.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/_ansi.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/_types.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/lock.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/types.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/_types.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/include/limits.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/types.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/features.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/stdio.h \
+  ../../config.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/string.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/string.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/stdlib.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/stdlib.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/alloca.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/time.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/time.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/time.h \
+  ../../include/osipparser2/osip_const.h \
+  ../../include/osipparser2/osip_list.h \
+  ../../include/osipparser2/osip_parser.h \
+  ../../include/osipparser2/osip_message.h \
+  ../../include/osipparser2/osip_headers.h \
+  ../../include/osipparser2/osip_uri.h \
+  ../../include/osipparser2/headers/osip_header.h \
+  ../../include/osipparser2/headers/osip_accept.h \
+  ../../include/osipparser2/headers/osip_content_type.h \
+  ../../include/osipparser2/headers/osip_accept_encoding.h \
+  ../../include/osipparser2/headers/osip_accept_language.h \
+  ../../include/osipparser2/headers/osip_alert_info.h \
+  ../../include/osipparser2/headers/osip_call_info.h \
+  ../../include/osipparser2/headers/osip_allow.h \
+  ../../include/osipparser2/headers/osip_content_length.h \
+  ../../include/osipparser2/headers/osip_authentication_info.h \
+  ../../include/osipparser2/headers/osip_authorization.h \
+  ../../include/osipparser2/headers/osip_call_id.h \
+  ../../include/osipparser2/headers/osip_contact.h \
+  ../../include/osipparser2/headers/osip_from.h \
+  ../../include/osipparser2/headers/osip_content_disposition.h \
+  ../../include/osipparser2/headers/osip_content_encoding.h \
+  ../../include/osipparser2/headers/osip_cseq.h \
+  ../../include/osipparser2/headers/osip_error_info.h \
+  ../../include/osipparser2/headers/osip_mime_version.h \
+  ../../include/osipparser2/headers/osip_proxy_authenticate.h \
+  ../../include/osipparser2/headers/osip_www_authenticate.h \
+  ../../include/osipparser2/headers/osip_proxy_authentication_info.h \
+  ../../include/osipparser2/headers/osip_proxy_authorization.h \
+  ../../include/osipparser2/headers/osip_record_route.h \
+  ../../include/osipparser2/headers/osip_route.h \
+  ../../include/osipparser2/headers/osip_to.h \
+  ../../include/osipparser2/headers/osip_via.h \
+  ../../include/osipparser2/osip_body.h parser.h
+
+../../include/osipparser2/osip_port.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/stdio.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/_ansi.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/newlib.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/config.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/ieeefp.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/include/stddef.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/include/stdarg.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/reent.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/_ansi.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/_types.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/lock.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/types.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/_types.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/include/limits.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/types.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/features.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/stdio.h:
+
+../../config.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/string.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/string.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/stdlib.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/stdlib.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/alloca.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/time.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/time.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/time.h:
+
+../../include/osipparser2/osip_const.h:
+
+../../include/osipparser2/osip_list.h:
+
+../../include/osipparser2/osip_parser.h:
+
+../../include/osipparser2/osip_message.h:
+
+../../include/osipparser2/osip_headers.h:
+
+../../include/osipparser2/osip_uri.h:
+
+../../include/osipparser2/headers/osip_header.h:
+
+../../include/osipparser2/headers/osip_accept.h:
+
+../../include/osipparser2/headers/osip_content_type.h:
+
+../../include/osipparser2/headers/osip_accept_encoding.h:
+
+../../include/osipparser2/headers/osip_accept_language.h:
+
+../../include/osipparser2/headers/osip_alert_info.h:
+
+../../include/osipparser2/headers/osip_call_info.h:
+
+../../include/osipparser2/headers/osip_allow.h:
+
+../../include/osipparser2/headers/osip_content_length.h:
+
+../../include/osipparser2/headers/osip_authentication_info.h:
+
+../../include/osipparser2/headers/osip_authorization.h:
+
+../../include/osipparser2/headers/osip_call_id.h:
+
+../../include/osipparser2/headers/osip_contact.h:
+
+../../include/osipparser2/headers/osip_from.h:
+
+../../include/osipparser2/headers/osip_content_disposition.h:
+
+../../include/osipparser2/headers/osip_content_encoding.h:
+
+../../include/osipparser2/headers/osip_cseq.h:
+
+../../include/osipparser2/headers/osip_error_info.h:
+
+../../include/osipparser2/headers/osip_mime_version.h:
+
+../../include/osipparser2/headers/osip_proxy_authenticate.h:
+
+../../include/osipparser2/headers/osip_www_authenticate.h:
+
+../../include/osipparser2/headers/osip_proxy_authentication_info.h:
+
+../../include/osipparser2/headers/osip_proxy_authorization.h:
+
+../../include/osipparser2/headers/osip_record_route.h:
+
+../../include/osipparser2/headers/osip_route.h:
+
+../../include/osipparser2/headers/osip_to.h:
+
+../../include/osipparser2/headers/osip_via.h:
+
+../../include/osipparser2/osip_body.h:
+
+parser.h:

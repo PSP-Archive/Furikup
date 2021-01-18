@@ -1,0 +1,3 @@
+SIP test,sip:10000@sipgate.co.uk,sip,test
+nickname,sip:number@sip.server.com,firstname,lastname
+landline,sip:00441234567890@sipgate.co.uk,landline,01234567890

@@ -1,0 +1,217 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Furikup - Documentación del Teléfono SIP para PSP</title>
+<link href="docs.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang=EN-US onload='generate_contents()'>
+<div class='logo_left'><img src='sipphone.png'></div>
+<div class='logo_right'><img src='sipphone.png'></div>
+<h1 class='title nocontents'>Furikup - Teléfono SIP para PSP v0.1</h1>
+
+<p align=center>Por Noobz!
+
+<div class='clear'>&nbsp</div>
+<h1 class='nocontents'>Fuentes Oficiales</h1>
+<table>
+<tr><td>Página Web Oficial:</td><td><a href="http://www.noobz.eu">http://www.noobz.eu</a> [En Inglés]</td></tr>
+<tr><td>Foro Oficial:</td><td><a href="http://forums.noobz.eu">http://forums.noobz.eu</a> [En Inglés]</td></tr>
+<tr><td>Canal de IRC Oficial:</td><td><a href="irc://irc.noobz.eu/noobz">#noobz on irc.noobz.eu</a> [En Inglés]</td></tr>
+</table>
+
+<div id='contents_table' style='display: none;'>
+<h1 class='nocontents'>Contents</h1>
+</div>
+<h1>Introducción</h1>
+
+<p>Éste programa te permite usar tu PSP a modo de teléfono, usando la tecnología de Voz-sobre-IP (VoIP). Nos hemos cansado de esperar que Sony sacase su oferta de Teléfono para la PSP, asi que pensamos que sería una buena idea que nosotros lo hiciésemos en su lugar. Ésta es la libertad que permite el Homebrew ("Aplicaciones caseras").
+
+<p>Puedes usar tu PSP para hacer y recibir llamadas a y desde otras PSPs, o a otros usuarios de Voz-sobre-IP (VoIP), o incluso a otros teléfonos fijos o móbiles, segun el servicio de Voz-sobre-IP que uses. Las llamadas son generalmente gratis, o por lo menos más baratas que las tarifas al usar teléfonos fijos, eso si, todo en función del proveedor de servicios de Voz-sobre-IP (VoIP) que uses.
+
+<p>Ésta es una primera versión, que actualmente sólo permite llamadas de audio, y con una interfaz de texto para usuario muy sencilla y básica. Pero funciona, y eso es lo principal.
+
+<p>El motor de Voz-sobre-IP (VoIP) ha sido implementado a modo de un PRX autónomo, con una interfaz de trabajo bien definida. A la par que el uso de nuestra sencilla aplicación de telefonía, recomendamos a otros desarrolladores que usen ésta tecnología para otras aplicaciones. Tambien estamos seguros de que alguien será capaz de escribir una interfaz de usuario más agradable que la nuestra, nos encantaría que así sea. Hay oportunidades de desarrollo para otros muchos usos - como por ejemplo un plugin para Custom Firmware (CFW) que sea capaz de realizar llamadas a través del XMB, o un añadido para juegos destinado a la intercomunicación entre componentes de un mismo equipo, etcétera. ¡Imagina!
+
+<h1>Requisitos para ejecutar esta aplicación</h1>
+
+<p>Para sacarle el máximo de esta aplicación necesitarás de lo siguiente:
+<ul>
+ <li>Una conexión de red inalámbrica funcional y razonablemente rápida para tu PSP. No hemos comprobado el funcionamiento con nada más lento que una conexión de banda ancha (ADSL).
+ <li>Custom firmware.  Lo hemos probado con la versión 3.71 M33-2. Puede que no funcione en otros Custom Firmwares. Con toda seguridad no funcionará en la versión 1.50 del Firmware oficial de la PSP, y probablemente no funcione a través del eLoader en otras versiones de Firmwares oficiales.
+ <li>Algún dispositivo de entrada de sonido para la PSP.  Hemos probado con el micrófono de la cámara de fotos de la PSP (Go!Cam), el micrófono USB del juego Talkman, y también debería funcionar con los auriculares compatibles con el juego SOCOM. Si no dispones de ningún dispositivo de entrada de audio, aun puedes probar esta aplicación mediante el uso de el sonido procedente de un fichero WAV - ver <a href='#inputfile'>más adelante</a>.
+ <li>Una cuenta de Voz-sobre-IP (VoIP) en un servidor SIP (SIP significa <strong>S</strong>ession <strong>I</strong>nitiation <strong>P</strong>rotocol, o Protocolo de Inicio de Sesiones en castellano, y es usado en el control de la telefonía digital).  Lo hemos probado con SIPGate (www.sipgate.co.uk, www.sipgate.de), pero probablemente el servicio que proporciona éste proveedor es válido solamente en Reino Unido/Alemania.
+</ul>
+
+<h1>Importantes limitaciones conocidas en esta versión</h1>
+
+<ul>
+<li>No hay soporte para llamadas con imagen de video o indicación de presencia aún. Éstos aparecerán en futuras versiones.
+
+<li>Sólo los 'sip:' URIs están soportados.  'tel:' URIs harán que el motor de VoIP se cuelgue.
+
+<li>Cuando se crea el ejecutable desde las fuentes, las librerías destino parecerá que fallan. Pero eso se debe simplemente a las aplicaciones de prueba, de modo que puedes ignorar el fallo con tranquilidad.
+
+<li>Ésta es una aplicación que esta aun en un elevado progreso de desarrollo, de modo que puedes esperar unos cuantos fallos, en concreto errores de sucesos e interoperabilidad con diferentes proveedores de servicios SIP con los que no hemos tenido aun ocasión de probar la aplicación.
+</ul>
+
+
+<h1>Términos de Uso</h1>
+
+<p class="warning">Éste programa está disponible para su uso tal-cual, sin ningún tipo de garantía de uso, seguridad, o eficácia para su propósito, etcétera. Hemos tomado todas las precauciones posibles para asegurar que no pueda dañar tu PSP, pero no podemos hacernos responsables de cualquier daño causado.
+
+<p class="warning">No se permite la venta de éste programa. Si has pagado dinero por éste programa (lo más probable a través de eBay), deberías solicitarle un reembolso de tu pago al vendedor, y denunciarle a las autoridades oportunas.
+
+<p class="warning">El código fuente esta disponible, parte del cual se proporciona bajo licencias específicas - mirar notas en el código fuente. Si usted distribuye algún trabajo basado en este programa, usted debe mantener todos los créditos, y hacer honor a aquellas licencias - las cuales generalmente requieren proporcionar el código fuente al completo con su trabajo.
+
+<h1>Instalación del Teléfono SIP para PSP</h1>
+
+<p>Copie el contenido de la carpeta MS_ROOT en la raiz de la tarjeta de memoria de su PSP. Si lo ha hecho correctamente, debería encontrar una serie de ficheros dentro de la carpeta
+<pre><code>  /PSP/GAME/Furikup
+</code></pre>
+<p>de su tarjeta de memoria.
+
+<p>Si usted está usando Custom Firmware, con la carpeta GAME configurada para la versión del kernel 1.50 por defecto, necesitará copiar los contenidos dentro de la carpeta GAME371 o similar (e.j. GAME352). Asumimos que usted tiene los conocimientos necesarios sobre como cambiar la versión del Kernel por defecto en su CFW, y por tanto que usted sabe lo que tiene que hacer.
+
+<h1>Obteniendo una cuenta de Voz-sobre-IP (VoIP)</h1>
+
+<p>Usted necesitará una cuenta con un proveedor de Voz-sobre-IP (VoIp) para poder ser capaz de usar el Teléfono SIP para PSP. Los servicios ofertados por los proveedores de VoIp suelen variar, de modo que como mínimo debes encontrar un proveedor que le permita registrarse con su servidor SIP. Usted debería ser capaz de encontrar un proveedor en su país simplemente lanzando una busqueda de "VOIP proveedor SIP" seguido del nombre de su país en google.
+
+<p>En Reino Unido y Alemania, nosotros encontramos <a href='http://www.sipgate.co.uk'>SIPGate</a>, que parece ser un muy buen proveedor. Ofrece conexión gratuita para llamadas desde una Red de Telefonía Conmutada (RTC) [PSTN, o Public Switched Telephone Network en inglés] a Voz-sobre-IP (De modo que usted puede hacer llamadas desde un telefono convencional a tu PSP),  y también costes de conexión muy baratos para llamadas desde Voz-sobre-IP a RTC (De modo que usted puede hacer llamadas desde tu PSP a teléfonos convencionales).  Éste proveedor tambien proporciona registro de cuentas gratuitas.
+
+<p>Una vez que se haya registrado, usted debería recibir la informacion detallada del servidor SIP al que debe conectarse, y los detalles de su cuenta para autentificarse con él. Para SIPGate, éstos detalles pueden verse en la página de las "Settings" de su cuenta dentro de su página Web.
+
+<p>Tenemos un hilo de ayuda en el
+<a href='http://forums.noobz.eu/sip-phone-support/compatible-voip-providers/0/'>foro oficial de Noobz</a>, con información sobre los proveedores de Voz-sobre-IP más recomendables. Si usted ha probado la aplicación Teléfono SIP para PSP con algún proveedor que no se encuentra en nuestra lista, por favor use el anterior hilo para comunicar los detalles sobre como lo hizo funcionar, de este modo le hará la vida más facil a otros usuarios.
+
+<p class='warning'>Dése cuenta que no hemos sido capaces de hacer funcionar el Teléfono SIP para PSP con VoipBuster.com.
+
+<h1>Ficheros de Configuración</h1>
+
+<h2>sipcfg.ini</h2>
+<p>Ahora usted necesitará modificar el fichero de configuración del programa para incluir los datos de su cuenta de Voz-sobre-IP, y seleccionar algunas preferencias. Puede encontrar el fichero de configuración en la carpeta <code>/psp/game/Furikup/sipcfg.ini</code> de su tarjeta de memoria. Puede editar el fichero de configuración con su editor de textos favorito - e.j. El bloc de notas de Windows, gedit o Emacs, según su gusto... El significado de los parámetros de configuración es el siguiente:
+
+<p>
+  <table border=1>
+     <tr><td><code>server</code></td><td>Nombre del Servidor SIP con el que se ha registrado. También será el usado como su Proxy SIP. No hay necesidad de especificar un número de puerto.</td></tr>
+     <tr><td><code>username</code></td><td>Nombre de usuario para el Servidor SIP.</td></tr>
+     <tr><td><code>password</code></td><td>Contraseña para el Servidor SIP.</td></tr>
+     <tr><td><code>stunserver</code></td><td>Servidor STUN que será necesario indicar en caso de que se encuentre detrás de un cortafuegos, pero no pasa nada si usa un Servidor STUN sin estar detrás de un cortafuegos. El único Servidor STUN que hemos probado con éxito es stun.voipbuster.com.</td></tr>
+     <tr><td><code>stunport</code></td><td>Éste es el número de puerto IP para usar con el Servidor STUN.   3478 es normalmente el número de puerto.</td></tr>
+     <tr><td><code>input</code></td><td>Éste es el tipo de entrada de audio utilizado. Las opciones son:
+<ul><li><code>usbcam</code> : Si usted usa el micrófono de la cámara de fotos Go!Cam (Chotto Shot)
+    <li><code>usbmic</code> : Si usted usa el micrófono USB del juego Talkman
+    <li><code>headset</code> : Si usted usa unos auriculares compatibles con el juego SOCOM (Hay innumerables manuales disponibles en Internet que le muestran como construirse uno usted mismo, e.j. <a href='http://www.psp-hacks.com/2005/11/21/make-your-own-socom-headset/'>aquí</a>).
+    <li><a name='inputfile' /><code>file</code> : Para usar un fichero WAV como fuente de sonido.  El fichero debe llamarse audio.wav, con formato de  44.1kHz, 16-bit mono, y situado en la carpeta Furikup de su tarjeta de memoria.
+</ul></td></tr>
+  </table>
+
+<h2>contacts.txt</h2>
+<p>Usted también necesitará configurar una libreta de direcciones con la gente a la que usted quiera llamar. Ésta información se define en el fichero <code>/psp/game/Furikup/contacts.txt</code>. Cada linea de texto contiene un contacto, con el siguiente formato:
+
+<p><code>Apodo,SIP URI,Nombre,Apellido</code>
+<p>La mayoría de estos datos se explican a si mismos, y unos cuantos ejemplos se han incluido en el fichero de muestra contacts.txt.
+
+<h1>Usando el Teléfono SIP para PSP</h1>
+
+<p>Para cargar el Teléfono SIP, simplemente ejecútelo de la manera habitual desde el menú Juego>Tarjeta de Memoria en el XMB.
+<p>Asegúrese que el interruptor de la conexión inalámbrica (Wifi) está activado. Tras unos momentos el Teléfono SIP debería haber completado el proceso de identificación en su Servidor SIP.
+<p>Se le presentará en pantalla un listado con los contactos. Seleccione uno mediante los botones arriba y abajo de la cruceta de dirección, y posteriormente pulse el botón <strong>X</strong> para marcar el contacto elegido. Instrucciones adicionales aparecerán en pantalla dependiendo de contexto en el que se encuentre, por ejemplo qué botón debe pulsar para aceptar o rechazar llamadas entrantes.
+<p>Para Salir de la aplicación, simplemente pulse el botón <strong>HOME</strong> como es lo habitual en aplicaciones caseras, o tambien puede pulsar el botón <strong>START</strong> que sirve de atajo.
+
+<h1>Solucionando problemas</h1>
+
+<p>Si tiene alun problema para conseguir hacer funcionar el Teléfono SIP para PSP, aquí le indicamos algunas soluciones que puede intentar:
+
+<ul>
+<li>Revise que la configuración de red inalámbrica para su PSP ha sido configurada correctamente. Nosotros hemos encontrado algunos problemas con resoluciones DNS usando una configuración de direcciones de IP estáticas, de modo que la activación de la opción de DHCP en su router es muy aconsejable.
+<li>Revise que los parámetros de configuración del fichero sipcfg.ini sean correctos. Si el estado del 'Server:' (Servidor:) muestra el siguiente mensaje en pantalla 'Connected' (Conectado) , entonces los parámetros 'server' (Nombre del Servidor SIP), 'username' (Nombre de usuario), 'password' (Contraseña), 'stunserver' (Servidor STUN) and 'stunport' (Número de puerto del servidor STUN) han sido configurados correctamente. De lo contrario, revise y modifique esos parámetros.
+<li>Intente realizar una llamada de prueba al número 'SIP Test' que aparece en la libreta de direcciones de muestra.  (Puede ser necesario que usted necesite cambiar el nombre del servidor que aparece como 'sipgate.co.uk' en el fichero contacts.txt, en el caso de que usted use un Servidor SIP diferente a SIPGate). Si ésta llamada funciona, entonces probablemente los problemas que experimente con las llamadas a otros números se deban a una entrada de datos erroneos en el fichero contacts.txt.
+<li>Ustéd puede activar el que se muestre información addicional de diagnóstico de problemas en pantalla, simplemente pulsando el botón <strong>SELECT</strong> mientras el Teléfono SIP este cargado en memoria. Si necesita ayuda para el diagnóstico de problemas, por favor anote los mensajes que le aparezcan en la patalla cuando la opcion de mostrar información adicional haya sido activada previamente y contacte con nosotros a través de los foros o el canal de IRC oficiales para recibir ayuda.
+</ul>
+
+
+<h1>Planes de Futuro</h1>
+
+<p>Pretendemos añadir las opciones de llamada con imagen de video e indicación de presencia al motor de Voz-sobre-IP en futuras versiones. Más alla de ésto, no tenemos otros planes para aplicaciones adicionales usando éste motor - así que si se le ocurre alguna idea, anímaese y vaya a por ella - pero por favor contacte con nosotros primero para que podamos echarle una mano.
+
+<h1>Agradecimientos</h1>
+
+<p>Ésta aplicación contiene código fuente de los siguientes projectos:
+<ul>
+<li>Librería oRTP por Simon Morlat y Lovadina Nicola
+<li>Librerías oSIP y eXoSIP por Aymeric Moizard
+</ul>
+<p>Su contribución es reconocida con agradecimiento, por favor vea información adicional en la documentación del código fuente.
+<p>Ésta aplicación no podría haber sido posible sin el duro trabajo de todos aquellos que a lo largo del tiempo han permitido que exista Homebrew ("Aplicaciones Caseras") en la PSP - desde aquellos que desarrollaron para los fallos de seguridad en el Firmware y para Custom Firmwares, a aquellos otros que desarrollaron las herramientas (especialmente el PSPSDK de <a href='www.ps2dev.org'>ps2dev.org</a>), y aquellos que trabajaron duramente para ayudar a los novatos en los diferentes foros de ayuda. Os saludamos a todos vosotros.
+
+<p>Si usted le ha encontrado utilidad a éste programa y le gustaría animar a sus desarrolladores para mejorarla en el futuro, por favor considere realizar una pequeña donación a través de PayPal a donations@noobz.eu.
+
+<h1>Historial de Cambios</h1>
+
+<ul>
+  <li>v0.1: Versión inicial
+     <ul><li>Ésta es la version inicial sacada a modo de prueba-de-concepto, permitiendo llamadas de voz únicamente, y con un interfaz de texto muy básico.
+     </ul>
+</ul>
+
+<script>
+function generate_contents()
+{
+ var headings = document.getElementsByTagName('H1')
+ var item
+ var tds
+ var count
+ var table
+ var anch
+ var lindest
+ var rawtext
+ var count = 0;
+ var noderow;
+ var nodetd;
+ var nodetable = document.createElement('OL');
+ var nodelink;
+
+ for (j=0; j<headings.length; j++)
+ {
+  if (headings.item(j).className.indexOf("nocontents") == -1)
+  {
+//		alert(item(j).innerHTML);
+
+		item = headings.item(j);
+
+		anch = document.createElement('A');
+		anch.href = '#' + item.innerHTML;
+
+		nodetd = document.createElement('LI');
+		nodetd.align = "left";
+		nodetd.width = "100px";
+		count++;
+		anch.innerHTML = item.innerHTML;
+		nodetd.appendChild(anch);
+		nodetable.appendChild(nodetd);
+
+		anch = document.createElement('A');
+		anch.name = item.innerHTML;
+		item.appendChild(anch);
+
+	}
+ }
+
+ nodetable.width="100%";
+
+ divs = document.getElementsByTagName('div');
+ for (i=0; i < divs.length; i++)
+ {
+  item=divs.item(i);
+  if (item.id=="contents_table")
+  {
+   item.appendChild(nodetable);
+	 item.style.display = 'inline';
+  }
+ }
+}
+</script>
+
+</body>

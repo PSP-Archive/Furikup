@@ -1,0 +1,40 @@
+In file included from rtpsession_inet.c:20:
+../include/ortp/ortp.h: In function 'ortp_log':
+../include/ortp/ortp.h:146: warning: implicit declaration of function 'abort'
+../include/ortp/ortp.h:146: warning: incompatible implicit declaration of built-in function 'abort'
+../include/ortp/ortp.h: In function 'ortp_message':
+../include/ortp/ortp.h:154: warning: incompatible implicit declaration of built-in function 'abort'
+../include/ortp/ortp.h: In function 'ortp_warning':
+../include/ortp/ortp.h:162: warning: incompatible implicit declaration of built-in function 'abort'
+../include/ortp/ortp.h: In function 'ortp_error':
+../include/ortp/ortp.h:172: warning: incompatible implicit declaration of built-in function 'abort'
+../include/ortp/ortp.h: In function 'ortp_fatal':
+../include/ortp/ortp.h:180: warning: incompatible implicit declaration of built-in function 'abort'
+rtpsession_inet.c: In function 'try_connect':
+rtpsession_inet.c:41: warning: implicit declaration of function 'getSocketError'
+rtpsession_inet.c: In function 'create_and_bind':
+rtpsession_inet.c:134: warning: implicit declaration of function 'inet_aton'
+rtpsession_inet.c: In function 'create_and_bind_random':
+rtpsession_inet.c:192: warning: implicit declaration of function 'rand'
+rtpsession_inet.c: In function 'ortp_inet_ntoa':
+rtpsession_inet.c:490: warning: implicit declaration of function 'inet_ntoa'
+rtpsession_inet.c:490: warning: initialization makes pointer from integer without a cast
+rtpsession_inet.c:491: warning: implicit declaration of function 'strncpy'
+rtpsession_inet.c:491: warning: incompatible implicit declaration of built-in function 'strncpy'
+rtpsession_inet.c: In function 'rtp_session_set_remote_addr':
+rtpsession_inet.c:594: warning: implicit declaration of function 'memcpy'
+rtpsession_inet.c:594: warning: incompatible implicit declaration of built-in function 'memcpy'
+rtpsession_inet.c: In function 'rtp_session_rtp_send':
+rtpsession_inet.c:762: warning: implicit declaration of function 'getSocketErrorCode'
+rtpsession_inet.c: In function 'rtp_session_rtp_recv':
+rtpsession_inet.c:851: warning: incompatible implicit declaration of built-in function 'memcpy'
+rtpsession_inet.c:874: error: 'EWOULDBLOCK' undeclared (first use in this function)
+rtpsession_inet.c:874: error: (Each undeclared identifier is reported only once
+rtpsession_inet.c:874: error: for each function it appears in.)
+rtpsession_inet.c:874: error: 'EAGAIN' undeclared (first use in this function)
+rtpsession_inet.c: In function 'rtp_session_rtcp_recv':
+rtpsession_inet.c:946: warning: incompatible implicit declaration of built-in function 'memcpy'
+rtpsession_inet.c:963: error: 'EWOULDBLOCK' undeclared (first use in this function)
+rtpsession_inet.c:963: error: 'EAGAIN' undeclared (first use in this function)
+make[1]: *** [rtpsession_inet.lo] Error 1
+make: *** [all-recursive] Error 1

@@ -1,0 +1,7 @@
+
+CPPFLAGS="-I$(psp-config --pspsdk-path)/include -G0" \
+LDFLAGS="-L$(psp-config --pspsdk-path)/lib -lc -lpspnet_inet -lpspnet_resolver -lpspuser" \
+./configure --enable-ipv6=no --enable-strict=no --host psp \
+--prefix=$(psp-config --psp-prefix)
+
+make;make install

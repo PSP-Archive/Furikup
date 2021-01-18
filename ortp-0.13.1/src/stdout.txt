@@ -1,0 +1,6 @@
+Making all in .
+make[1]: Entering directory `/usr/local/svn/code/sip/ortp-0.13.1/src'
+if /bin/sh ../libtool --tag=CC --mode=compile psp-gcc -DHAVE_CONFIG_H -I. -I. -I.. -I/usr/local/pspdev/psp/sdk/include -I/usr/local/pspdev/psp/include -I../include/     -I..  -g -O2 -Wall  -MT rtpsession_inet.lo -MD -MP -MF ".deps/rtpsession_inet.Tpo" -c -o rtpsession_inet.lo rtpsession_inet.c; \
+	then mv -f ".deps/rtpsession_inet.Tpo" ".deps/rtpsession_inet.Plo"; else rm -f ".deps/rtpsession_inet.Tpo"; exit 1; fi
+ psp-gcc -DHAVE_CONFIG_H -I. -I. -I.. -I/usr/local/pspdev/psp/sdk/include -I/usr/local/pspdev/psp/include -I../include/ -I.. -g -O2 -Wall -MT rtpsession_inet.lo -MD -MP -MF .deps/rtpsession_inet.Tpo -c rtpsession_inet.c -o rtpsession_inet.o
+make[1]: Leaving directory `/usr/local/svn/code/sip/ortp-0.13.1/src'

@@ -1,0 +1,101 @@
+port_condv.lo port_condv.o: port_condv.c ../../include/osip2/internal.h \
+  ../../include/osipparser2/osip_port.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/stdio.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/_ansi.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/newlib.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/config.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/ieeefp.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/include/stddef.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/include/stdarg.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/reent.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/_ansi.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/_types.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/lock.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/types.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/_types.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/include/limits.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/types.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/features.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/stdio.h \
+  ../../config.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/string.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/string.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/stdlib.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/stdlib.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/alloca.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/time.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/time.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/time.h \
+  ../../include/osipparser2/osip_const.h \
+  ../../include/osipparser2/osip_list.h ../../include/osip2/osip_mt.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/errno.h \
+  /usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/errno.h \
+  ../../include/osip2/osip_condv.h
+
+../../include/osip2/internal.h:
+
+../../include/osipparser2/osip_port.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/stdio.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/_ansi.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/newlib.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/config.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/ieeefp.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/include/stddef.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/include/stdarg.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/reent.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/_ansi.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/_types.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/lock.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/types.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/_types.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/include/limits.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/types.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/features.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/stdio.h:
+
+../../config.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/string.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/string.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/stdlib.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/stdlib.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/alloca.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/time.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/machine/time.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/time.h:
+
+../../include/osipparser2/osip_const.h:
+
+../../include/osipparser2/osip_list.h:
+
+../../include/osip2/osip_mt.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/errno.h:
+
+/usr/local/pspdev/lib/gcc/psp/4.1.0/../../../../psp/include/sys/errno.h:
+
+../../include/osip2/osip_condv.h:
